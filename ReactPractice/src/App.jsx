@@ -3,6 +3,11 @@ import "./App.css";
 import ExampleComponent from "./components/ExampleComponent";
 import Copyright from "./components/Copyright";
 import PropDisplayer from "./components/PropDisplayer";
+import City from "./components/City";
+import Pet from "./components/Pet";
+import { FullName } from "./components/Fullname";
+import ComplexComment from "./components/ComplexComment";
+import Comment from "./components/comment/Comment";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -26,6 +31,15 @@ function App() {
             <cite>{spiderman.alterEgo}</cite>
         </>
     );
+
+    const comment = {
+        date: new Date(),
+        text: "I hope you enjoyed Learning React",
+        author: {
+            name: "C. Chamberlin",
+            avatarUrl: "https://placehold.co/300",
+        },
+    };
 
     return (
         <>
@@ -57,9 +71,23 @@ function App() {
             {invalidJSX}
             {spideyFragment}
             <ExampleComponent />
-            <PropDisplayer myprops="First Prop">
-                <p>I am a child of PropsDisplayer</p>
-            </PropDisplayer>
+            <PropDisplayer myprops="First Prop"></PropDisplayer>
+            <City name="Richmond">
+                <p>I'm a child prop</p>
+            </City>
+            <Pet type="Feline" name="Bear" color="Black" />
+            <FullName
+                first="C"
+                middle="D"
+                last="C"
+                style={{ fontSize: "3rem" }}
+            />
+
+            <Comment
+                author={comment.author}
+                date={comment.date}
+                text={comment.text}
+            />
             <Copyright />
         </>
     );
