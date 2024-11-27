@@ -8,6 +8,8 @@ import Pet from "./components/Pet";
 import { FullName } from "./components/Fullname";
 import ComplexComment from "./components/ComplexComment";
 import Comment from "./components/comment/Comment";
+import MovieLists from "./components/moviesList/MovieList";
+import BirthdayTranslator from "./components/BirthdayTranslator";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -67,7 +69,7 @@ function App() {
             </div>
             <p className="read-the-docs">
                 Click on the Vite and React logos to learn more
-            </p> */}
+            </p>
             {invalidJSX}
             {spideyFragment}
             <ExampleComponent />
@@ -88,6 +90,9 @@ function App() {
                 date={comment.date}
                 text={comment.text}
             />
+            <MovieLists />
+            */}
+            <BirthdayTranslator />
             <Copyright />
         </>
     );
