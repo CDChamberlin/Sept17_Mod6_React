@@ -10,6 +10,7 @@ import ComplexComment from "./components/ComplexComment";
 import Comment from "./components/comment/Comment";
 import MovieLists from "./components/moviesList/MovieList";
 import BirthdayTranslator from "./components/BirthdayTranslator";
+import ExplodingBomb from "./components/Errors/ExplodingBomb";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -92,8 +93,9 @@ function App() {
             />
             <MovieLists />
             */}
-            <BirthdayTranslator />
-            <Copyright />
+            {/* <BirthdayTranslator />
+            <Copyright /> */}
+            <ExplodingBomb />
         </>
     );
 }
